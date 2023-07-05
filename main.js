@@ -16,8 +16,16 @@ const rockPaperScissors = (hand1, hand2) => {
 
   // Write code here
   // Use the unit test to see what is expected
+
+  //trim and lowercase
   let handOne = hand1.toLowerCase().trim();
   let handTwo = hand2.toLowerCase().trim();
+
+  // if isValidInput () {
+   
+  // }
+ 
+
 
 //   if ((handOne === 'rock' && handTwo === 'scissors' ) || (handOne === 'paper' && handTwo === 'rock') || (handOne === 'scissors' && handTwo === 'paper')) {
 //     return "Hand one wins!"
@@ -28,6 +36,13 @@ const rockPaperScissors = (hand1, hand2) => {
 //   }
 // }
 
+//blank space
+  // if (handOne === '') {
+  //   return 'Hand one, you must make a choice'
+  // } else {
+  //   return 'Hand two, you must make a choice'
+  // }
+
   if (handOne === handTwo) {
     return 'It\'s a tie!'
   } else if (handOne === 'rock') {
@@ -37,6 +52,7 @@ const rockPaperScissors = (hand1, hand2) => {
     } else {
       return "Hand one wins!"
     }
+
   } else if (handOne === 'paper') {
     if(handTwo === ' rock') {
       //paper wins
@@ -53,6 +69,17 @@ const rockPaperScissors = (hand1, hand2) => {
       return "Hand one wins!"
     }
   }
+}
+
+const isValidInput = (hand1, hand2) => {
+  // trim and lowercase inputs
+  // if not = rock, paper, scissors, return false
+  // if hand1 or hand2 is blank, return false
+  // if typeof input is a number, return false
+  // otherwise return true
+
+
+
 }
 
 // the first function called in the program to get an input from the user
@@ -89,6 +116,10 @@ if (typeof describe === 'function') {
       assert.equal(rockPaperScissors('Paper', 'SCISSORS'), "Hand two wins!");
       assert.equal(rockPaperScissors('rock ', 'sCiSsOrs'), "Hand one wins!");
     });
+    // it('should not allow blank inputs', () => {
+    //   assert.equal(rockPaperScissors('', 'paper'), 'Hand one, you must make a choice');
+    //   assert.equal(rockPaperScissors('paper', ''), 'hand two you, must make a choice');
+    // });
   });
 } else {
 
